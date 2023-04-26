@@ -56,4 +56,11 @@ let main args =
     //If x is assigned another value, it will use another part of the memory to do so, preserving the contents pointed by listA.
 
     //References: https://fsharpforfunandprofit.com/posts/correctness-immutability/
+
+    //Exercises: 
+    //1. How would we add up ten numbers ( 1 .. 10 ) without using Linq.SumBy / Seq.sumBy - and you can't use the 
+    //mutable keyword. what do you do?
+    //let myArray = [ 1 .. 10 ]
+    //let sum = myArray |> Seq.
+    //2. Understand the difference between expressions + statements; how does it relate to mutability? how does it relate to the ignore function? what are the costs + benefits of expressions vs statements?
     0
