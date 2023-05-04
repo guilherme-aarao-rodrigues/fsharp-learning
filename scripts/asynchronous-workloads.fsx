@@ -123,8 +123,10 @@ open System.Diagnostics
 //  Usage: dotnet fsi asynchronous-workloads.fsx [uri] [pattern] [localPath] [mode]
 let logUsageError =
     Log.red
-        @"Usage: massdownload url nameregex downloadpath mode - e.g. 
-    massdownload https://minorplanetcenter.net/data neam.*\.json\.gz$ c:\temp\downloads synchronous
+        @"Usage: dotnet fsi asynchronous-workloads.fsx url nameregex downloadpath mode
+    downloadpath (folder) must exist!
+    e.g. :
+    dotnet fsi asynchronous-workloads.fsxhttps://minorplanetcenter.net/data neam.*\.json\.gz$ c:\temp\downloads synchronous
     modes: synchronous .. (more to come)"
 
 let args = fsi.CommandLineArgs |> Array.tail
@@ -136,7 +138,9 @@ type Mode =
     | AsynchronousThrottled
     | Invalid
 // A program to get multiple files from download links provided on a website.
-// E.g. dotnet fsi asynchronous-workloads.fsx https://minorplanetcenter.net/data "neam.*\.json\.gz$" "C:\Users\GuilhermeRodrigues\source\fsharp-coaching\learning-experiments\fsharp-learning\scripts\asynchronous-workloads-filedump" "Synchronous"
+// Usage: dotnet fsi asynchronous-workloads.fsx nameregex downloadpath mode
+// modes: - synchronous - ... more to come
+// E.g. dotnet fsi asynchronous-workloads.fsx https://minorplanetcenter.net/data "neam.*\.json\.gz$" "C:\asynchronous-workloads-filedump" "Synchronous"
 // dotnet run http://compling.hss.ntu.edu.sg/omw "\.zip$" "c:\temp\downloads"
 // Large!
 // dotnet run http://storage.googleapis.com/books/ngrams/books/datasetsv2.html "eng\-1M\-2gram.*\.zip$" "c:\temp\downloads"
