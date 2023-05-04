@@ -75,10 +75,10 @@ module Consumer =
 let logUsage () =
     printfn
         @"This exercise takes 1 argument. Usage: 
-    - dotnet fsi exercises-async.fsx S: Run synchronous solution
-    - dotnet fsi exercises-async.fsx AP: Run asynchronous parallel solution
-    - dotnet fsi exercises-async.fsx APT: Run asynchronous parallel throttled (2) solution
-    - dotnet fsi exercises-async.fsx AS: Run asynchronous sequential solution"
+    - dotnet fsi exercises-async_1.fsx S: Run synchronous solution
+    - dotnet fsi exercises-async_1.fsx AP: Run asynchronous parallel solution
+    - dotnet fsi exercises-async_1.fsx APT: Run asynchronous parallel throttled (2) solution
+    - dotnet fsi exercises-async_1.fsx AS: Run asynchronous sequential solution"
 
 let args = fsi.CommandLineArgs |> Array.tail
 
