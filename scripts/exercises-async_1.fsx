@@ -15,7 +15,6 @@ module Random =
 
     let string () =
         let length = random.Next(0, 10)
-
         Array.init length (fun _ -> random.Next(0, 255) |> char)
         |> String
 
