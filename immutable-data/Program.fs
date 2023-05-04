@@ -37,7 +37,7 @@ let main args =
     )
     //This statement isnt true anymore, since listD is pointing to the original location listA used to point before being assigned "= listB"
     Console.WriteLine(
-        $"List A = List D after assignment ListA = ListB? {Object.ReferenceEquals(listA, listD).ToString()}"
+        $"listggA = List D after assignment ListA = ListB? {Object.ReferenceEquals(listA, listD).ToString()}"
     )
     let listA = listD //Resetting the location of the pointer listA to its original position
     let mutable x = listA//Creating mutable location containing elements pointed by listA  

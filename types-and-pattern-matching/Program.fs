@@ -32,14 +32,14 @@ let main args =
     )
     //Records: A tuple where each element is labeled
     let guilhermeCompact: CompactProfile =
-        ((guilherme.FirstName + "" + guilherme.LastName), guilherme.Age)
+        ((guilherme.FirstName + " " + guilherme.LastName), guilherme.Age)
         
     Console.WriteLine(
         $"""Hello {guilhermeCompact |> fst}. {match guilhermeCompact |> snd with
                                               | x when x >= 18 -> "You can already drink in Brazil!"
                                               | _ -> "You have to drink milk!"}"""
     )
-    //Discriminated Unions and pattern matching:
+    //Discriminated Unions and pattern matching:ss
 
 
 
